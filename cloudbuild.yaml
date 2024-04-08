@@ -1,0 +1,8 @@
+ steps:
+ - name: gcr.io/crmdevops/
+     args: ["install"]
+ - name: gcr.io/crmdevops/
+     args: ["update"]
+ - name: "gcr.io/cloud-builders/gcloud"
+     args: ["app","deploy", "app-${master}.yaml"]
+ timeout:
